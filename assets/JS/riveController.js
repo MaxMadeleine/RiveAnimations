@@ -1,5 +1,7 @@
 let isFeed;
 let isHaha;
+let isSad
+let numHealth
 
 const riveInstance = new rive.Rive({
 
@@ -17,6 +19,12 @@ const riveInstance = new rive.Rive({
 
     isFeed = controllerInputs.find((item) => item.name === 'Feed')
     isHaha = controllerInputs.find((item) => item.name === 'haha')
+    isSad = controllerInputs.find((item) => item.name === 'sad')
+    numHealth = controllerInputs.find((item) => item.name === 'numHealth')
+
+    console.log(numHealth);
+    
+
 
         
     }
@@ -26,4 +34,4 @@ const riveInstance = new rive.Rive({
 
 })
 
-export {isFeed, isHaha};
+export {isFeed, isHaha, isSad, numHealth};
