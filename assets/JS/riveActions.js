@@ -1,23 +1,24 @@
-import { isWave } from "./riveController.js"
+import { isFeed } from "./riveController.js"
 
-import {isSeizure} from "./riveController.js"
+import {isHaha} from "./riveController.js"
 
-let waveButton = document.getElementById('waveButton')
+let feedButton = document.getElementById('feedButton')
 
-let seizureButton = document.getElementById('seizureButton')
+let angryButton = document.getElementById('hahaButton')
 
-const wave = () => {
-    isWave.fire();
+const feed = () => {
+    isFeed.fire();
 };
 
-const seizure = () => {
-    isSeizure.fire()
+const haha = () => {
+    isHaha.fire()
 }
 
-waveButton.addEventListener("click", () => {
-wave()
+feedButton.addEventListener("click", () => {
+feed()
 });
 
-seizureButton.addEventListener("click", () => {
-    seizure()
+angryButton.addEventListener("click", () => {
+    haha()
 });
+

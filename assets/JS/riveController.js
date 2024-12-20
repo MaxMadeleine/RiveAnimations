@@ -1,23 +1,22 @@
-let isWave;
-
-let isSeizure;
+let isFeed;
+let isHaha;
 
 const riveInstance = new rive.Rive({
 
-    src: "assets/animation/hej.riv",
+    src: "assets/animation/yoursheep.riv",
     canvas: document.getElementById('riveCanvas'),
     autoplay: true,
-    stateMachines: 'StateMachineShark',
+    stateMachines: 'controller',
     //stateMachines: ['state machine shark', 'controller']
     onload: () =>{
         riveInstance.resizeDrawingSurfaceToCanvas();
 
-        let stateMachineSharkInputs = riveInstance.stateMachineInputs('StateMachineShark');
+        let controllerInputs = riveInstance.stateMachineInputs('controller');
 
-        console.log('StateMachineShark', stateMachineSharkInputs);
+        console.log('controller', controllerInputs);
 
-    isWave = stateMachineSharkInputs.find((item) => item.name === 'wave')
-    isSeizure = stateMachineSharkInputs.find((item) => item.name === 'seizure')
+    isFeed = controllerInputs.find((item) => item.name === 'Feed')
+    isHaha = controllerInputs.find((item) => item.name === 'haha')
 
         
     }
@@ -27,4 +26,4 @@ const riveInstance = new rive.Rive({
 
 })
 
-export {isWave, isSeizure};
+export {isFeed, isHaha};
